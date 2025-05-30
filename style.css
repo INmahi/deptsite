@@ -1,0 +1,74 @@
+/* 🌒 Default Dark Mode */
+:root {
+  --bg-main: #0d1117;
+  --bg-secondary: #161b22;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;
+  --text-heading: #f0f6fc;
+  --accent-primary: #58a6ff;
+  --accent-secondary: #1f6feb;
+  --success: #3fb950;
+  --warning: #d29922;
+  --danger: #f85149;
+  --border: #30363d;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* ☀️ Light Mode Overrides */
+.light-mode {
+  --bg-main: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --text-main: #0d1117;
+  --text-muted: #555;
+  --text-heading: #111;
+  --accent-primary: #1f6feb;
+  --accent-secondary: #0033cc;
+  --success: #22863a;
+  --warning: #b08800;
+  --danger: #cf222e;
+  --border: #d0d7de;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: var(--text-heading);
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow);
+  margin-top: 1rem;
+}
+
+button {
+  background-color: var(--accent-primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--accent-secondary);
+}
