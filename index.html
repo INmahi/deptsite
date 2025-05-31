@@ -5,20 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Statistics Department</title>
   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Statistics & Data Science Department</h1>
-    <button id="theme-toggle">Toggle Theme</button>
+    <div class="cursor-bg"></div>
+    <div class="custom-cursor"></div>
+  <header class="main-header">
+    <div class="header-left">
+        <img src="assets/img/sust_logo.png" alt="Department Logo" class="header-logo" />
+        <span class="header-title">
+            Statistics 24-25, SUST
+            <i class="fas fa-graduation-cap" style="margin-left:8px;"></i>
+        </span>
+    </div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="header-nav" id="header-nav">
+        <a href="#curriculum" class="header-link">
+            <i class="fas fa-book-open"></i>
+            Curriculum
+        </a>
+        <a href="#events" class="header-link">
+            <i class="fas fa-calendar-alt"></i>
+            Events
+        </a>
+        <a href="#memories" class="header-link">
+            <i class="fas fa-images"></i>
+            Memories
+        </a>
+        <button id="theme-toggle" class="btn header-btn" aria-label="Toggle Theme">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </nav>
   </header>
 
   <main>
-    <section class="card">
-      <h2>Welcome!</h2>
-      <p>This is a modern dark-mode website for our department.</p>
+    <section class="hero section">
+        <div class="hero-content">
+            <p class="hero-moto animate__animated animate__fadeInDown">
+                <i class="fas fa-quote-left"></i>
+                <span id="typewriter-moto"></span>
+                <i class="fas fa-quote-right"></i>
+            </p>
+            <h1 class="hero-title animate__animated animate__fadeInUp">
+                Department of Statistics, SUST
+            </h1>
+            <h2 class="hero-batch animate__animated animate__fadeInUp">
+                Batch 2024-25
+            </h2>
+            <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-1s">
+                <button class="btn hero-btn primary">
+                    <i class="fas fa-route"></i> Take Tour
+                </button>
+                <button class="btn hero-btn secondary">
+                    <i class="fas fa-book-open"></i> Our Curriculum
+                </button>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
     </section>
-  </main>
-
+</main>
   <script src="script.js"></script>
 </body>
 </html>
