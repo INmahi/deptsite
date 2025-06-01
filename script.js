@@ -11,6 +11,34 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
+// Make custom cursor follow the mouse faster and more precisely
+const cursor = document.querySelector('.custom-cursor');
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let cursorX = mouseX;
+let cursorY = mouseY;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    // Move cursor tracking background instantly
+    const bg = document.querySelector('.cursor-bg');
+    bg.style.setProperty('--x', `${e.clientX}px`);
+    bg.style.setProperty('--y', `${e.clientY}px`);
+});
+
+// Animation loop for delayed cursor (faster and more precise)
+function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.58; // Increase the factor for faster response (was 0.18)
+    cursorY += (mouseY - cursorY) * 0.58;
+    cursor.style.left = `${cursorX}px`;
+    cursor.style.top = `${cursorY}px`;
+    requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+
 const toggleBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
